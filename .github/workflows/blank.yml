@@ -1,0 +1,297 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
+
+          vegetable_id,sweetness,bitterness,earthiness,water_content
+1,2,0,3,88
+2,1,2,2,84
+3,1,1,3,87
+4,1,1,1,92
+5,1,1,1,89
+6,1,0,0,95
+7,1,1,1,92
+8,2,0,1,94
+9,1,1,1,91
+10,0,2,2,65
+11,1,1,2,89
+12,3,0,2,77
+13,2,0,2,80
+14,1,1,2,95
+15,1,0,1,96
+16,1,0,1,95
+17,2,0,1,92
+18,2,0,1,92
+19,2,0,1,94
+20,1,1,2,93
+21,1,0,1,94
+22,1,0,1,94
+23,0,2,1,88
+24,2,0,1,77
+25,1,0,1,80
+26,1,0,1,80
+27,1,0,1,80
+28,1,0,1,80
+29,1,0,1,80
+30,1,0,2,85
+
+id,nutrient_name,health_effect
+1,鍮꾪?誘?A,"?쒕젰 媛쒖꽑, ?쇰? 嫄닿컯"
+2,"踰좏?移대줈??""??궛?? 硫댁뿭??媛뺥솕""",
+3,鍮꾪?誘?C,"?쇰줈 ?뚮났, 肄쒕씪寃??⑹꽦, 硫댁뿭??媛뺥솕"
+4,"吏덉궛??""?덉븬 議곗젅"," ?덇? 嫄닿컯"""
+5,?쎌궛,"?명룷 ?앹꽦, ?쒖븘 嫄닿컯"
+6,鍮꾪?誘?K,"?덉븸 ?묎퀬, 堉?嫄닿컯"
+7,?섎텇,"?섎텇 蹂댁땐, ?명룓臾?諛곗텧"
+8,鍮꾪?誘?U,"???먮쭑 蹂댄샇, ??嫄닿컯"
+9,移쇱뒛,"堉?嫄닿컯, ?좉꼍 ?꾨떖"
+10,"?뚮━??""??퇏"," 硫댁뿭??媛뺥솕"""
+11,鍮꾪?誘?B6,"?좉꼍 嫄닿컯, ?먮꼫吏 ???
+12,?뚮씪蹂대끂?대뱶,??궛?? ?덇? 嫄닿컯"""
+13,?앹씠?ъ쑀,"??嫄닿컯, 蹂鍮??덈갑"
+14,移쇰ⅷ,"?덉븬 議곗젅, 洹쇱쑁 湲곕뒫"
+15,鍮꾪?誘?B2,"?쇰줈 ?뚮났, ?쇰? 嫄닿컯"
+16,"猷⑦뀒??""??嫄닿컯"," ?⑸컲 蹂댄샇"""
+17,?쇱씠肄뷀렂,??궛?? ?꾨┰??嫄닿컯
+18,?대━?섎?,??궛?? ?명솕 諛⑹?
+19,"?댁냼?뚮씪蹂?""?몃Ⅴ紐?議곗젅"," ?먭꼍湲?嫄닿컯"""
+20,"吏꾩?濡?""??뿼"," ?뚰솕 珥됱쭊"""
+21,??덈뒆,??궛?? 硫댁뿭??媛뺥솕
+22,"濡쒖쫰留덈┛??""??궛?? ?쇱쬆 ?꾪솕""",
+23,罹≪궗?댁떊,"吏諛??곗냼, ?덉븸?쒗솚 珥됱쭊 "
+
+id,vegetable_id,nutrient_name,amount_per_100g,unit,nutrient_type
+1,1,踰좏?移대줈??8285,關g,??궛??,
+2,1,鍮꾪?誘?A,835,關g,鍮꾪?誘?
+3,2,鍮꾪?誘?C,120,mg,鍮꾪?誘?
+4,3,吏덉궛??250,mg,湲곕뒫??,
+5,4,?쎌궛,194,關g,鍮꾪?誘?
+6,5,鍮꾪?誘?K,101.6,關g,鍮꾪?誘?
+7,6,?섎텇,95.2,g,湲고?
+8,7,鍮꾪?誘?U,10,mg,湲곕뒫??
+9,8,移쇱뒛,36,mg,誘몃꽕??
+10,9,?뚮━??4,mg,湲곕뒫??,
+11,10,鍮꾪?誘?B6,1.2,mg,鍮꾪?誘?
+12,11,?뚮씪蹂대끂?대뱶,7,mg,??궛??
+13,12,?앹씠?ъ쑀,3,g,湲고?
+14,13,移쇰ⅷ,425,mg,誘몃꽕??
+15,14,鍮꾪?誘?C,21,mg,鍮꾪?誘?
+16,15,鍮꾪?誘?B2,0.07,mg,鍮꾪?誘?
+17,16,鍮꾪?誘?C,45,mg,鍮꾪?誘?
+18,17,猷⑦뀒??2.5,mg,??궛??,
+19,18,踰좏?移대줈??120,關g,??궛??,
+20,19,?쇱씠肄뷀렂,2573,關g,??궛??
+21,20,?대━?섎?,15,mg,??궛??
+22,21,鍮꾪?誘?E,0.5,mg,鍮꾪?誘?
+23,22,?앹씠?ъ쑀,1.2,g,湲고?
+24,23,罹≪궗?댁떊,0.3,mg,湲곕뒫??
+25,24,?앹씠?ъ쑀,2.7,g,湲고?
+26,25,?⑤갚吏?5.4,g,湲고?,
+27,26,泥?2.9,mg,誘몃꽕??,
+28,27,鍮꾪?誘?B1,0.2,mg,鍮꾪?誘?
+29,28,?댁냼?뚮씪蹂?3,mg,湲곕뒫??,
+30,29,?⑤갚吏?8.1,g,湲고?,
+31,30,?대━?섎?,10,mg,??궛??
+32,31,?대닃由?4,mg,湲곕뒫??,
+33,32,吏꾩?濡?2,mg,湲곕뒫??,
+34,33,?꾩뒪?뚮씪湲?1.2,mg,湲곕뒫??,
+35,34,??덈뒆,0.7,關g,誘몃꽕??
+36,35,鍮꾪?誘?A,400,關g,鍮꾪?誘?
+37,36,鍮꾪?誘?K,207,關g,鍮꾪?誘?
+38,37,濡쒖쫰留덈┛??5,mg,??궛??,
+39,38,鍮꾪?誘?C,20,mg,鍮꾪?誘?
+40,39,鍮꾪?誘?C,27,mg,鍮꾪?誘?
+
+id,name_ko,name_en,category
+1,?밴렐,Carrot,肉뚮━梨꾩냼
+2,耳??Kale,?롮콈??,
+3,鍮꾪듃,Beet,肉뚮━梨꾩냼
+4,?쒓툑移?Spinach,?롮콈??,
+5,釉뚮줈肄쒕━,Broccoli,苑껋콈??
+6,?ㅼ씠,Cucumber,怨쇱콈瑜?
+7,?묐같異?Cabbage,?롮콈??,
+8,?곸텛,Lettuce,?롮콈??
+9,??Green onion,?롮콈??,
+10,留덈뒛,Garlic,肉뚮━梨꾩냼
+11,?묓뙆,Onion,肉뚮━梨꾩냼
+12,怨좉뎄留?Sweet potato,肉뚮━梨꾩냼,
+13,媛먯옄,Potato,肉뚮━梨꾩냼
+14,臾?Radish,肉뚮━梨꾩냼,
+15,諛곗텛,Chinese cabbage,?롮콈??
+16,泥?꼍梨?Bok choy,?롮콈??,
+17,?쇰쭩,Bell pepper,怨쇱콈瑜?
+18,?뚰봽由ъ뭅,Paprika,怨쇱콈瑜?
+19,?좊쭏??Tomato,怨쇱콈瑜?,
+20,媛吏,Eggplant,怨쇱콈瑜?
+21,?몃컯,Zucchini,怨쇱콈瑜?
+22,?좏샇諛?Korean zucchini,怨쇱콈瑜?,
+23,怨좎텛,Chili pepper,怨쇱콈瑜?
+24,?μ닔??Corn,怨〓쪟,
+25,?꾨몢肄?Pea,肄⑸쪟,
+26,媛뺣궘肄?Kidney bean,肄⑸쪟,
+27,?밸몢,Mung bean,肄⑸쪟
+28,肄?Soybean,肄⑸쪟,
+29,?먮?,Tofu,媛怨듭떇??
+30,?곌렐,Lotus root,肉뚮━梨꾩냼
+31,?곗뿁,Burdock,肉뚮━梨꾩냼
+32,?앷컯,Ginger,肉뚮━梨꾩냼
+33,?꾩뒪?뚮씪嫄곗뒪,Asparagus,以꾧린梨꾩냼
+34,??щ━,Celery,以꾧린梨꾩냼
+35,誘몃굹由?Water dropwort,以꾧린梨꾩냼,
+36,遺異?Chive,?롮콈??,
+37,源살옂,Perilla leaf,?롮콈??
+38,??Mugwort,?롮콈??,
+39,怨좎닔,Coriander,?롮콈??
+40,??Dill,?롮콈??,
+41,濡쒖쫰留덈━,Rosemary,?롮콈??
+42,諛붿쭏,Basil,?롮콈??
+43,?뚯뒳由?Parsley,?롮콈??,
+44,?쒓툑移?Spinach,?롮콈??,
+45,猷④섦??Arugula,?롮콈??,
+46,肄쒕씪?쒓렇由?Collard greens,?롮콈??,
+47,洹쇰?,Swiss chard,?롮콈??
+48,?꾩슧,Malva,?롮콈??
+49,移섏빱由?Chicory,?롮콈??,
+50,?먯뒪移대·,Escarole,?롮콈??
+51,?쇰뵒移섏삤,Radicchio,?롮콈??
+52,?붾뵒釉?Endive,?롮콈??,
+53,釉뚮ㅌ??ㅽ봽?쇱슦??Brussels sprout,苑껋콈??,
+54,肄쒕━?뚮씪??Cauliflower,苑껋콈??,
+55,?꾪떚珥덊겕,Artichoke,苑껋콈??
+56,?대컮?쇨린??Sunflower sprout,?뱀콈??,
+57,?뚰뙏?뚯떦,Alfalfa sprout,?뱀콈??
+58,臾댁닚,Radish sprout,?뱀콈??
+59,肄⑸굹臾?Soybean sprout,?뱀콈??,
+60,?숈＜?섎Ъ,Mung bean sprout,?뱀콈??
+61,?덉떦蹂대━,Barley sprout,?뱀콈??
+62,?덉넚?대쾭??King oyster mushroom,踰꾩꽢瑜?,
+63,?쒓퀬踰꾩꽢,Shiitake mushroom,踰꾩꽢瑜?
+64,?먰?由щ쾭??Oyster mushroom,踰꾩꽢瑜?,
+65,?쎌씠踰꾩꽢,Enoki mushroom,踰꾩꽢瑜?
+66,?묒넚?대쾭??Button mushroom,踰꾩꽢瑜?,
+67,?≪씠踰꾩꽢,Matsutake,踰꾩꽢瑜?
+68,紐⑹씠踰꾩꽢,Wood ear mushroom,踰꾩꽢瑜?
+69,李몃굹臾?Chamnamul,?롮콈??,
+70,?뚮굹臾?Stonecrop,?롮콈??,
+71,?됱씠,Shepherd's purse,?롮콈??
+72,?щ옒,Wild chive,?롮콈??
+73,?붾뜒,Deodeok,肉뚮━梨꾩냼
+74,?꾨씪吏,Balloon flower root,肉뚮━梨꾩냼
+75,留?Yam,肉뚮━梨꾩냼,
+76,移?Kudzu,肉뚮━梨꾩냼,
+77,?곗뿁,Burdock,肉뚮━梨꾩냼
+78,?곌렐,Lotus root,肉뚮━梨꾩냼
+79,?좊?,Taro,肉뚮━梨꾩냼
+80,怨좉뎄留덉닚,Sweet potato stem,以꾧린梨꾩냼
+81,媛먯옄??Potato stem,以꾧린梨꾩냼,
+82,怨좎궗由?Bracken,以꾧린梨꾩냼,
+83,痍⑤굹臾?Aster scaber,?롮콈??,
+84,怨곗랬,Ligularia fischeri,?롮콈??
+85,紐낆씠?섎Ъ,Alpine leek,?롮콈??
+86,?곕쭏??Wild garlic,?롮콈??,
+87,誘몄뿭,Seaweed,?댁“瑜?
+88,?ㅼ떆留?Kelp,?댁“瑜?,
+89,??Hijiki,?댁“瑜?,
+90,?뚮옒,Green laver,?댁“瑜?
+91,源,Laver,?댁“瑜?
+92,泥?꼍梨?Bok choy,?롮콈??,
+93,?꾩슧,Malva,?롮콈??
+94,洹쇰?,Swiss chard,?롮콈??
+95,肄쒕씪?쒓렇由?Collard greens,?롮콈??,
+96,猷④섦??Arugula,?롮콈??,
+97,移섏빱由?Chicory,?롮콈??,
+98,?먯뒪移대·,Escarole,?롮콈??
+99,?쇰뵒移섏삤,Radicchio,?롮콈??
+100,泥?꼍梨?Bok choy,?롮콈??,
+
+
+import sqlite3
+import pandas as pd
+
+conn = sqlite3.connect("veggie_ai.db")
+cursor = conn.cursor()
+
+# 테이블 생성
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Vegetables (
+    id INTEGER PRIMARY KEY,
+    name_ko TEXT NOT NULL,
+    name_en TEXT NOT NULL,
+    category TEXT,
+    image_url TEXT
+);
+""")
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Nutrients (
+    id INTEGER PRIMARY KEY,
+    vegetable_id INTEGER NOT NULL,
+    nutrient_name TEXT NOT NULL,
+    amount_per_100g REAL NOT NULL,
+    unit TEXT NOT NULL,
+    nutrient_type TEXT,
+    FOREIGN KEY (vegetable_id) REFERENCES Vegetables(id)
+);
+""")
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS HealthEffects (
+    id INTEGER PRIMARY KEY,
+    nutrient_name TEXT NOT NULL,
+    health_effect TEXT NOT NULL,
+    scientific_source TEXT
+);
+""")
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS FlavorProfile (
+    vegetable_id INTEGER PRIMARY KEY,
+    sweetness INTEGER DEFAULT 0,
+    bitterness INTEGER DEFAULT 0,
+    earthiness INTEGER DEFAULT 0,
+    water_content REAL,
+    FOREIGN KEY (vegetable_id) REFERENCES Vegetables(id)
+);
+""")
+conn.commit()
+
+# CSV → DB 삽입
+pd.read_csv("vegetables.csv").to_sql("Vegetables", conn, if_exists="replace", index=False)
+pd.read_csv("nutrients.csv").to_sql("Nutrients", conn, if_exists="replace", index=False)
+pd.read_csv("health_effects.csv").to_sql("HealthEffects", conn, if_exists="replace", index=False)
+pd.read_csv("flavor_profile.csv").to_sql("FlavorProfile", conn, if_exists="replace", index=False)
+
+conn.commit()
+conn.close()
+print("CSV 데이터가 veggie_ai.db에 성공적으로 입력되었습니다.") 
+
